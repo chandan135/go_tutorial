@@ -27,4 +27,29 @@ func main() {
 	for i, value := range exampleArray {
 		fmt.Printf("address is %v and value is %d\n", &i, value)
 	}
+
+	var newSlice []int
+	fmt.Println()
+	fmt.Println("---Examining the capacity and length of the new slice---")
+
+	fmt.Printf("\ncapacity = %d\nlength = %d\n", cap(newSlice), len(newSlice))
+	fmt.Println(newSlice)
+
+	for i := 0; i < 5; i++ {
+		newSlice = append(newSlice, i)
+	}
+	fmt.Printf("\ncapacity = %d\nlength = %d\n", cap(newSlice), len(newSlice))
+	fmt.Println(newSlice)
+
+	for j := 5; j < 10; j++ {
+		newSlice = append(newSlice, j)
+	}
+	fmt.Printf("\ncapacity = %d\nlength = %d\n", cap(newSlice), len(newSlice))
+	fmt.Println(newSlice)
+
+	for k := 10; k < 15; k++ {
+		newSlice = append(newSlice, k)
+	}
+	fmt.Printf("\ncapacity = %d\nlength = %d\n", cap(newSlice), len(newSlice))
+	fmt.Println(newSlice)
 }
